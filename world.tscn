@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://kvwbyi3bouhx"]
+
+[ext_resource type="Texture2D" uid="uid://cm4p7vt11gky8" path="res://icon.svg" id="1_edxkh"]
+
+[node name="Environment" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(563, 306)
+texture = ExtResource("1_edxkh")
