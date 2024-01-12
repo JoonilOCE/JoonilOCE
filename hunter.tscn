@@ -1,5 +1,21 @@
-[gd_scene format=3 uid="uid://bc1r0o5q82q1d"]
+[gd_scene load_steps=4 format=3 uid="uid://bc1r0o5q82q1d"]
 
-[node name="MonsterHunter" type="CharacterBody2D"]
+[ext_resource type="Script" path="res://movement.gd" id="1_uqvnv"]
+[ext_resource type="Texture2D" uid="uid://do5p68sph0odm" path="res://hunter.png" id="2_27wg7"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uxf2m"]
+radius = 29.37
+height = 85.697
+
+[node name="Environment" type="Node2D"]
+
+[node name="MonsterHunter" type="CharacterBody2D" parent="."]
+scale = Vector2(0.980162, 0.984053)
+script = ExtResource("1_uqvnv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterHunter"]
+scale = Vector2(-0.99406, 0.782636)
+shape = SubResource("CapsuleShape2D_uxf2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="MonsterHunter"]
+texture = ExtResource("2_27wg7")
